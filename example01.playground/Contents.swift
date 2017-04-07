@@ -72,4 +72,16 @@ print(emptyDictionary)
 // Using if and switch to make conditions, and use for-in, for, while ,and do-while to make 
 // loops.
 
+let individualScores = [75, 43, 103, 87, 12]
+var teamScore = 0
+
+for score in individualScores{
+    if score > 50{
+        teamScore+3
+    }else{
+        teamScore += 1
+    }
+}
+print("Team score is " + String(teamScore))
+
 
