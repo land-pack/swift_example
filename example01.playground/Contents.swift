@@ -84,4 +84,62 @@ for score in individualScores{
 }
 print("Team score is " + String(teamScore))
 
+//Change optionalName to nil. What greeting do you get? Add an else clause that sets a different greeting if optionalName is nil.
 
+var optionalString: String? = "Hello"
+optionalString == nil
+
+var optionalName:String? = "John APpleseed"
+optionalName = nil
+var greeting = "Hello!"
+
+if let name = optionalName {
+    greeting = "hello\(name)"
+}else{
+    greeting = "hello false"
+}
+
+print(greeting)
+
+// Switches support any kind of data and a wide variety of comparison operations -- they aren't limited to integers and tests for equality.
+
+let vegetable = "red pepper xx"
+var vegetableComment:String? = "default value"
+
+switch vegetable {
+    
+case "celery":
+    vegetableComment = "Add some raisins and make ants on  a log"
+case "cucumber", "watercress":
+    vegetableComment = "That would make a good tea sandwich."
+case let x where x.hasSuffix("pepper"):
+    vegetableComment = "Is it a spicy \(x)?"
+default:
+    vegetableComment = "Everything tastes good in soup."
+}
+
+print(vegetableComment)
+
+
+// After executing the code inside the switch case that matched, the program exits from the switch statement. Execution doesn't continue to the next case, so there is need to explicitly break out of switch at the end of each case's code. 
+
+// You use for-in  to iterate over items in a dictionary by providing a pair of names to use for each key-value pair.
+
+let interestingNumber = [
+    "prime":[2,3,5,7,11,13],
+    "fabonacci":[1,1,2,3,5,8],
+    "square":[1,4,9,16,25]
+
+]
+
+var largest = 0
+
+for(kind, numbers) in interestingNumber{
+    for number in numbers{
+        if number > largest{
+            largest = number
+        }
+    }
+}
+
+print(largest)
